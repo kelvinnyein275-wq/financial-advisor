@@ -28,7 +28,7 @@ def terminal_page():
         session["chat_history"].append({"role" : "user", "message" : user_message})
         history_prompt = create_history_prompt(session["chat_history"])
         response = financial_advice(chat, history_prompt)
-        session["chat_history"].append({"role" : "assistant", "message" : "response"})
+        session["chat_history"].append({"role" : "assistant", "message" : response})
 
     return render_template("terminal-page.html", chat_history=session["chat_history"])
 
