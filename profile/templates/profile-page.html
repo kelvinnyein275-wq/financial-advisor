@@ -1,0 +1,70 @@
+{% extends "basetemplate.html" %}
+{% block title %}Your profile{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('profile.static', filename='profile-page.css') }}" type="text/css">
+{% endblock %}
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <p>{{msg}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+        <div class="main-body">
+           
+            <div class="cluster-profile-container">
+                <p class="cluster-identified-text">Cluster Identified:</p>
+                <p class="cluster-name">&#127942; {{profile_name}}</p>
+                <p class="cluster-description">{{profile_description}}</p>
+                
+            </div>
+
+            <div class="cluster-median-stats-container">
+                <p class="cluster-median-stats-text">Your stats vs Cluster median</p>
+
+                <div class="financial-stat-container">
+                    <p class="financial-stat-name">Monthly Income</p>
+                    <p class="financial-stat-numbers">You: {{your_income}}  Median: {{median_income}}</p>
+                </div>
+
+                <div class="financial-stat-container">
+                    <p class="financial-stat-name">Monthly Savings</p>
+                    <p class="financial-stat-numbers">You: {{your_savings}}  Median: {{median_savings}}</p>
+                </div>
+
+                <div class="financial-stat-container">
+                    <p class="financial-stat-name">Monthly Expenses</p>
+                    <p class="financial-stat-numbers">You: {{your_expenses}}  Median: {{median_expenses}}</p>
+                </div>
+
+                <div class="financial-stat-container">
+                    <p class="financial-stat-name">Age</p>
+                    <p class="financial-stat-numbers">You: {{your_age}}  Median: {{median_age}}</p>
+                </div>
+            </div>
+
+            <div class="financial-metric-grid">
+                <div class="financial-metric-container">
+                    <p class="metric-icon">&#128176;</p>
+                    <p class="metric-category">Savings Rate</p>
+                    <p class="metric-numbers">{{savings_rate}}</p>
+                    <p class="metric-median-numbers">Median: {{median_savings_rate}}</p>
+                </div>
+
+                <div class="financial-metric-container">
+                    <p class="metric-icon">&#127974;</p>
+                    <p class="metric-category">Expense Ratio</p>
+                    <p class="metric-numbers">{{expense_ratio}}</p>
+                    <p class="metric-median-numbers">Median: {{median_expense_ratio}}</p>
+                </div>
+            </div>
+
+            <form action="{{url_for('terminal.terminal_page')}}" method="GET">
+                <button class="chat-advisor-button" type="submit">
+                    Launch chat advisor
+                </button>
+            </form>
+        </div>
+
+{% endblock %}

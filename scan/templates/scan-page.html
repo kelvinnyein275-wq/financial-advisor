@@ -1,0 +1,46 @@
+{% extends "basetemplate.html" %}
+{% block title %}Scan{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('scan.static', filename='scan-page.css') }}" type="text/css">
+{% endblock %}
+{% block content %}
+    <section class="scan-page" aria-labelledby="scan-heading">
+        <header class="header-container">
+            <h1 id="scan-heading">Enter your stats to begin</h1>
+        </header>
+
+        <main class="main-container">
+            <p class="description">Fill in your details to discover your financial profile!</p>
+            <form action="" class="inputs" method="post">
+                <div class="input-container">
+                    <label for="age">Age</label>
+                    <input class="input-box" id="age" name="age" type="text" placeholder="25 years" required min="1" max="120" step="0.01"/>
+                    {% with messages = get_flashed_messages() %}
+                        {% if messages %}
+                            {% for msg in messages %}
+                                <p class="flashed-messages">{{msg}}</p>
+                            {% endfor %}
+                        {% endif %}
+                    {% endwith %}
+                </div>
+
+                <div class="input-container">
+                    <label for="income">Monthly Income</label>
+                    <input class="input-box" id="income" name="income" type="text" placeholder="$1200" required min="1" step="0.01" />
+                </div>
+
+                <div class="input-container">
+                    <label for="savings">Monthly Savings</label>
+                    <input class="input-box" id="savings" name="savings" type="text" placeholder="$500" required min="1" step="0.01"/>
+                </div>
+
+                <div class="input-container">
+                    <label for="expenses">Monthly Expenses</label>
+                    <input class="input-box" id="expenses" name="expenses" type="text" placeholder="$800" required min="1" step="0.01"/>
+                </div>
+
+                <button type="submit" value="Submit" class="submit-button">Run Analysis</button>
+            </form>
+        </main>
+    </section>
+{% endblock %}

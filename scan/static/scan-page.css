@@ -1,0 +1,144 @@
+.scan-page {
+    width: calc(100% - 32px);
+    max-width: 760px;
+    margin: 40px auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.navbar {
+    min-height: 56px;
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 0 24px;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+.navbar-header {
+    float: none;
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.navbar-nav > li > a {
+    padding: 18px 14px;
+}
+
+.header-container {
+    background-color: rebeccapurple;
+    border: 1px solid blueviolet;
+    border-bottom: 0;
+    border-radius: 10px 10px 0 0;
+    padding: 20px 28px;
+}
+
+.header-container h1 {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.main-container {
+    background-color: white;
+    border: 1px solid pink;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 12px 28px rgba(100, 30, 100, 0.12);
+    padding: 28px;
+}
+
+.description {
+    color: rebeccapurple;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 24px;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-container label {
+    color: rebeccapurple;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.input-box {
+    width: 100%;
+    min-height: 44px;
+    border: 1px solid #e8b8d2;
+    border-radius: 6px;
+    padding: 10px 12px;
+    background-color: white;
+    color: #3d2940;
+    font: inherit;
+    font-size: 15px;
+}
+
+.input-box:focus {
+    border-color: rebeccapurple;
+    outline: 3px solid rgba(102, 51, 153, 0.15);
+}
+
+.submit-button {
+    border: none;
+    border-radius: 6px;
+    background-color: rebeccapurple;
+    color: white;
+    padding: 12px 18px;
+    transition: background-color 0.2s;
+    font: inherit;
+    font-weight: bold;
+    margin-top: 4px;
+    justify-self: start;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    background-color: #542b80;
+}
+
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 20px;
+}
+
+@media (max-width: 640px) {
+    .navbar {
+        padding: 0 12px;
+    }
+
+    .navbar-nav > li > a {
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+
+    .scan-page {
+        width: calc(100% - 24px);
+        margin: 24px auto;
+    }
+
+    .header-container,
+    .main-container {
+        padding: 20px;
+    }
+
+    .inputs {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+}

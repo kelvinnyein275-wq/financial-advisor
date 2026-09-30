@@ -1,0 +1,131 @@
+.cluster-profile-container {
+    background-color: lightyellow;
+    border-width: 2px;
+    border-color: goldenrod;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 5px; 
+}
+
+.cluster-identified-text {
+    color: pink;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+
+.cluster-name {
+    color: goldenrod;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+   
+    
+}
+
+.cluster-description {
+    color: black;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;  
+}
+
+
+.cluster-median-stats-container {
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: hotpink;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cluster-median-stats-text {
+    color: hotpink;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+
+.financial-stat-container {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    vertical-align: middle;
+    align-items: center;
+}
+
+.financial-stat-name {
+    color: purple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5px;
+}
+
+.financial-stat-numbers {
+    color: goldenrod;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 8px;
+}
+
+.financial-metric-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 3px;
+}
+
+.financial-metric-container {
+    background-color: white;
+    border-width: 2px;
+    border-style: solid;
+    border-color: hotpink;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.metric-category {
+    color: purple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 8px;
+}
+
+.metric-numbers {
+    color: hotpink;
+    font-size: 13px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.metric-median-numbers {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: pink;
+    font-size: 8px;
+}
+
+
+.chat-advisor-button {
+    background-color: rgb(118, 62, 175);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rebeccapurple;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 13px;
+    padding-left: 6px;
+    padding-right: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    transition: opacity 0.2s;
+}
+
+.chat-advisor-button:hover {
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+
+
+
+
+
+
+

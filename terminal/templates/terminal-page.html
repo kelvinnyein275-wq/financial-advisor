@@ -1,0 +1,60 @@
+{% extends "basetemplate.html" %}
+{% block title %}Chatbot{% endblock %}
+{% block styles %}
+    <link rel="stylesheet" href="{{ url_for('terminal.static', filename='terminal-page.css') }}" type="text/css">
+{% endblock %}
+{% block content %}
+    <div class="terminal-container">
+    
+                <div class="terminal-header-container"> 
+                    <p class="terminal-header">Advisor Terminal</p>
+                    <p class="terminal-status">System: {{system_status}} </p>
+                </div>
+                
+
+                <p class="terminal-name">Finquest Advisor Terminal v1.0</p>
+                <p class="terminal-profile">Profile: {{proile_name}}</p>
+                <p class="terminal-help">Type "help" for commands</p>
+                
+                <div class="chat-history">
+
+                    {% for message in chat_history %}
+
+                        {% if message["role"] == "user" %}
+                            <div class="user-message">
+                                <p>{{ message["message"] }}</p>
+                            </div>
+
+                        {% else %}
+                            <div class="assistant-message">
+                                <p>{{ message["message"] }}</p>
+                            </div>
+
+                        {% endif %}
+
+                    {% endfor %}
+
+            </div>
+                <div class="terminal-input-div">
+                    <div class="terminal-input-container">
+                        <form method="POST" class="chat-input-container">
+                            <input class="input-box" type="text" placeholder="enter your commands here..." name="message" required/>
+                            <button class="submit-button" type="submit" value="submit">></button>
+                        </form>
+                    </div> 
+
+                    
+                        
+                </div>
+               
+                
+                
+
+            </div>
+
+            <script>
+                const chatHistory = document.querySelector(".chat-history");
+
+                chatHistory.scrollTop = chatHistory.scrollHeight;
+            </script>
+{% endblock %}
